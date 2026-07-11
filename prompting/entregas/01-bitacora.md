@@ -19,7 +19,7 @@
 Resumí en 2–3 líneas el objetivo del ejercicio con tus palabras (no copiado del enunciado).
 
 ```
-...
+El objetivo del ejercicio es incorporar una nueva entidad llamada materias a la API existente, respetando la arquitectura y el estilo del proyecto. Se tiene que implementar su CRUD completo (controller, service y repository), conectarlo a PostgreSQL y exponer sus endpoints sin modificar la estructura ya utilizada para alumnos y cursos.
 ```
 
 ---
@@ -32,15 +32,97 @@ Pegá **todos** los prompts que usaste, en orden, con la respuesta resumida y qu
 
 **Lo que escribí:**
 ```
-...
+# ROL
+Actuá como un desarrollador backend senior especializado en Node.js, Express y PostgreSQL. Tenés experiencia trabajando con arquitecturas en capas (Controller → Service → Repository), escribiendo código limpio y consistente con proyectos ya existentes.
+
+# CONTEXTO
+Estoy haciendo un TP de una API REST con:
+Node.js
+Express
+PostgreSQL
+paquete pg
+ES Modules (import/export)
+Arquitectura:
+controllers
+services
+repositories
+NO usamos ORM (Prisma, Sequelize, TypeORM, etc.).
+
+Ya existen las entidades alumnos y cursos, cada una con:
+controller
+service
+repository
+
+También existe una clase DbPg que encapsula el acceso a la base mediante métodos como:
+queryAll()
+queryOne()
+queryReturnId()
+queryRowCount()
+
+Quiero que todo el código nuevo siga exactamente el mismo estilo que el proyecto existente.
+
+Después de este mensaje voy a pegar los siguientes archivos para que los uses como referencia:
+db-pg.js
+cursos-repository.js
+cursos-service.js
+cursos-controller.js
+Esos archivos son la única referencia válida de estilo.
+No inventes otra arquitectura ni otra forma de programar.
+
+# TAREA
+Necesito agregar una nueva entidad llamada materias.
+
+La tabla es:
+CREATE TABLE materias (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(75) NOT NULL
+);
+
+También existe otra tabla:
+CREATE TABLE calificaciones (
+    id SERIAL PRIMARY KEY,
+    id_alumno INT NOT NULL REFERENCES alumnos(id),
+    id_materia INT NOT NULL REFERENCES materias(id),
+    nota INT NOT NULL,
+    fecha DATE NOT NULL DEFAULT CURRENT_DATE,
+    UNIQUE(id_alumno, id_materia)
+);
+
+En este ejercicio NO hay que programar nada relacionado con calificaciones. Solo necesito el CRUD completo para materias, igual al de cursos.
+
+Los endpoints finales deberán permitir:
+GET
+GET por id
+POST
+PUT
+DELETE
+
+# RESTRICCIONES
+NO uses ORM.
+NO agregues dependencias.
+NO cambies la arquitectura existente.
+NO simplifiques el código.
+NO cambies nombres de métodos.
+NO cambies el estilo.
+Usá exclusivamente la clase DbPg.
+Usá queries parametrizadas ($1, $2, etc.).
+Conservá los console.log si el proyecto ya los utiliza.
+Respetá la organización Repository → Service → Controller.
+Escribí código listo para copiar y pegar.
+Si detectás que falta información, preguntá antes de asumir.
+
+# ITERACIÓN
+Quiero hacerlo paso a paso. Primero analizá los archivos que te pase. Después generá únicamente materias-repository.js. Esperá mi revisión. Cuando te diga "seguí", recién generá materias-service.js. Cuando vuelva a decir "seguí", recién generá materias-controller.js. Finalmente, cuando todo esté correcto, indicame exactamente qué debo agregar en server.js para registrar: 
+app.use("/api/materias", ...); 
+No avances a la siguiente capa hasta que yo lo autorice.
 ```
 
 **Auto-chequeo de las 5 partes EFSI** (marcá lo que incluiste):
-- [ ] Rol
-- [ ] Contexto (¿pegaste código del proyecto?)
-- [ ] Tarea
-- [ ] Restricciones
-- [ ] Iteración
+- [✅] Rol
+- [✅] Contexto (¿pegaste código del proyecto?)
+- [✅] Tarea
+- [✅] Restricciones
+- [✅] Iteración
 
 **Qué me devolvió (resumen):**
 ```
