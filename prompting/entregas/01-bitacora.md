@@ -126,7 +126,41 @@ No avances a la siguiente capa hasta que yo lo autorice.
 
 **Qué me devolvió (resumen):**
 ```
-...
+Perfecto. Entendí las restricciones y voy a respetarlas.
+
+No voy a:
+
+* cambiar la arquitectura;
+* introducir patrones distintos;
+* usar ORM;
+* renombrar métodos;
+* "mejorar" el código por mi cuenta;
+* avanzar a la siguiente capa hasta que me autorices.
+
+El flujo va a ser exactamente este:
+
+1. Analizo los archivos que me pases.
+2. Genero únicamente `materias-repository.js`.
+3. Espero tu revisión.
+4. Cuando digas **"seguí"**, genero `materias-service.js`.
+5. Cuando vuelvas a decir **"seguí"**, genero `materias-controller.js`.
+6. Cuando todo esté aprobado, te indico exactamente qué agregar en `server.js` para registrar:
+
+```js
+app.use("/api/materias", ...);
+```
+
+Antes de escribir una sola línea de código necesito ver los archivos de referencia, porque dijiste que **son la única referencia válida de estilo**.
+
+Pegame, en este orden si puede ser:
+
+1. `db-pg.js`
+2. `cursos-repository.js`
+3. `cursos-service.js`
+4. `cursos-controller.js`
+
+Con eso analizaré el estilo (nombres de métodos, manejo de errores, SQL, logs, respuestas, etc.) y recién después generaré **únicamente** `materias-repository.js`.
+
 ```
 
 **¿Me sirvió tal cual, o tuve que corregir/repreguntar?**
