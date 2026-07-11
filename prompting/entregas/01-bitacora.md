@@ -146,9 +146,7 @@ El flujo va a ser exactamente este:
 5. Cuando vuelvas a decir **"seguí"**, genero `materias-controller.js`.
 6. Cuando todo esté aprobado, te indico exactamente qué agregar en `server.js` para registrar:
 
-```js
 app.use("/api/materias", ...);
-```
 
 Antes de escribir una sola línea de código necesito ver los archivos de referencia, porque dijiste que **son la única referencia válida de estilo**.
 
@@ -165,7 +163,7 @@ Con eso analizaré el estilo (nombres de métodos, manejo de errores, SQL, logs,
 
 **¿Me sirvió tal cual, o tuve que corregir/repreguntar?**
 ```
-...
+Por el momento no
 ```
 
 ### Prompt #2
