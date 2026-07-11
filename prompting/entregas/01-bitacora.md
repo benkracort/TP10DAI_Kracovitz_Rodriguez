@@ -10,7 +10,7 @@
 - **Alumno/as:** Benjamin Kracovitz y Catalina Rodriguez
 - **Ejercicio:** N° 01 — Nueva tabla y su CRUD
 - **Fecha:** 11/07/2026
-- **Modelo de IA usado:** (ej: ChatGPT, Claude, Gemini, Copilot) ChatGPT
+- **Modelo de IA usado:** ChatGPT
 
 ---
 
@@ -170,14 +170,19 @@ Por el momento no
 
 **Lo que escribí:**
 ```
-...
+db-pg.js:
+[todo el código de db-pg.js, innecesario ponerlo de nuevo aca]
+cursos-repository.js:
+[todo el código de cursos-repository.js, innecesario ponerlo de nuevo aca]
+cursos-service.js:
+[todo el código de cursos-service.js, innecesario ponerlo de nuevo aca]
+cursos-controller.js:
+[todo el código de cursos-controller.js, innecesario ponerlo de nuevo aca]
 ```
 **Por qué necesité este segundo prompt** (qué falló o faltó en el anterior):
 ```
-...
+En el anterior prompt le dije que le iba a pasar despues de ese mensaje los 4 archivos para que tenga las bases del proyecto.
 ```
-
-*(Repetí la estructura para cada prompt. Si resolviste todo con un solo prompt gigante, ⚠️ eso es 🟡 según EFSI — explicá por qué.)*
 
 ---
 
