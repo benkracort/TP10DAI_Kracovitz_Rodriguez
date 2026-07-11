@@ -232,5 +232,5 @@ Cubrí: qué proceso seguiste, qué decisiones tomaste y por qué, qué aprendis
 - [ ] Link/PDF de la conversación completa con la IA: [https://chatgpt.com/c/6a52c20a-178c-83e9-aa7c-9eb85ec957c0](https://chatgpt.com/c/6a52c20a-178c-83e9-aa7c-9eb85ec957c0)
 - [ ] Commit(s) en GitHub: [https://github.com/benkracort/TP10DAI_Kracovitz_Rodriguez/commit/b8dbeae08dee38bc39946d769be58a7544999007](https://github.com/benkracort/TP10DAI_Kracovitz_Rodriguez/commit/b8dbeae08dee38bc39946d769be58a7544999007)
 - [ ] Capturas / evidencias de verificación
-![GET](../images/capturas-pantalla/01-get.png)
-![GET por ID](../images/capturas-pantalla/01-get-por-id.png)
+![GET](../../images/capturas-pantalla/01-get.png)
+![GET por ID](../../images/capturas-pantalla/01-get-por-id.png)
